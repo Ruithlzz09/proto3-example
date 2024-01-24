@@ -1,0 +1,23 @@
+{
+  "name": "proto3-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "20.10.0"
+  },
+  "scripts": {
+    "build": "bash ./compile.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^20.11.6",
+    "google-protobuf": "^3.21.2",
+    "protoc-gen-js": "^3.21.2",
+    "ts-node": "^10.9.2",
+    "ts-protoc-gen": "^0.15.0",
+    "typescript": "^5.3.3"
+  }
+}
