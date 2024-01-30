@@ -7,6 +7,31 @@ OUT_DIR="./out"
 mkdir -p "${OUT_DIR}/js" "${OUT_DIR}/ts"
 
 protoc \
+    --proto_path='src/protos' \
     --js_out=import_style=commonjs,binary:"${OUT_DIR}/js" \
     --ts_out="${OUT_DIR}/ts" \
-    ./src/protos/artifact.proto
+    src/protos/artifact.proto
+
+protoc \
+    --proto_path='src/protos' \
+    --js_out=import_style=commonjs,binary:"${OUT_DIR}/js" \
+    --ts_out="${OUT_DIR}/ts" \
+    src/protos/core.proto
+
+protoc \
+    --proto_path='src/protos' \
+    --js_out=import_style=commonjs,binary:"${OUT_DIR}/js" \
+    --ts_out="${OUT_DIR}/ts" \
+    src/protos/printersvc.proto
+
+protoc \
+    --proto_path='src/protos' \
+    --js_out=import_style=commonjs,binary:"${OUT_DIR}/js" \
+    --ts_out="${OUT_DIR}/ts" \
+    src/protos/service.proto
+
+protoc \
+    --proto_path='src/protos' \
+    --js_out=import_style=commonjs,binary:"${OUT_DIR}/js" \
+    --ts_out="${OUT_DIR}/ts" \
+    src/protos/taxonomy.proto
