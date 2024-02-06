@@ -17,5 +17,6 @@ for (( j = 0; j < argc; ++j )); do
   ./node_modules/.bin/grpc_tools_node_protoc -I ${argv[j]}/protos/  \
     --js_out=import_style=commonjs:${OUT_DIR}/js/ \
     --grpc_out=grpc_js:${OUT_DIR}/js/ \
+    --ts_out=${OUT_DIR}/ts \
     $(find ${argv[j]}/protos/ -type f -name "*.proto")
 done
